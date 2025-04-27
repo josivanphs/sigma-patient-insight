@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-sigma-white text-sigma-black font-sans;
+  }
+}
+
+@layer components {
+  .sigma-card {
+    @apply bg-white rounded-lg shadow-md p-6 transition duration-200 hover:shadow-lg border border-gray-100;
+  }
+  
+  .sigma-container {
+    @apply container mx-auto px-4 md:px-6;
+  }
+
+  .sigma-btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .sigma-btn-primary {
+    @apply bg-sigma-blue text-white hover:bg-sigma-blue-dark;
+  }
+
+  .sigma-btn-secondary {
+    @apply bg-gray-100 text-sigma-black hover:bg-gray-200;
   }
 }
